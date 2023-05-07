@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tensor I | Klasifikasi Bunga Iris</title>
+    <link rel="stylesheet" href="../static/style/css/style.css">
+    <link rel="icon" href="../static/image/about-image.jpg" type="image/x-ico">
+</head>
+<body>
+    <section class="home">
+        <nav>
+            <a href="#" class="nav-logo">tensor iris</a>
+            <div class="nav-link">
+                <a href="#">home</a>
+                <a href="#about">about</a>
+                <a href="#our-team">our team</a>
+            </div>
+            <div class="menu">
+                <div class="menu-item"></div>
+                <div class="menu-item"></div>
+                <div class="menu-item"></div>
+            </div>
+        </nav>
+        <div class="content-home">
+            <p>Selamat Datang Di Aplikasi Klasifikasi Spesies Bunga Iris</p>
+            <p>Aplikasi klasifikasi bunga iris ini dilengkapi dengan algoritma machine learning yang dapat memproses data dengan cepat dan memberikan hasil yang akurat.</p>
+            <a href="#predict">Mulai</a>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-title">
+            <span class="about-line"></span>
+            <p>About</p>
+            <span class="about-line"></span>
+        </div>
+        <div class="about-content">
+            <img src="../static//image/about-image.jpg" alt="gambar bunga" class="about-image">
+            <p>
+                Aplikasi ini dibuat untuk menentukan spesies bunga iris berdasarkan pengukuran
+                panjang serta lebar dari sepal dan petal bunga. "Iris Setosa", "Iris Versicolor", dan "Iris Virginica"
+                adalah ketiga spesies bunga iris yang dapat diprediksi melalui aplikasi ini.
+                Penguna hanya cukup memberikan 4 nilai pengukuran untuk dapat mengetahui spesies dari bunga iris tersebut.
+                Keempat nilai pengukuran tersebut adalah panjang petal, lebar petal, panjang sepal, dan lebar sepal. 
+            </p>
+        </div>
+    </section>
+    <section id="predict">
+        <div class="about-title">
+            <span class="about-line"></span>
+            <p>Prediction</p>
+            <span class="about-line"></span>
+        </div>
+        <form action="/api/predict" method="post" id="form-login">
+            <div>
+                <label for="sl">Sepal Length</label>
+                <input type="text" id="sl" name="SepalLengthCm">
+            </div>
+            <div>
+                <label for="sw">Sepal Width</label>
+                <input type="text" id="sw" name="SepalWidthCm">
+            </div>
+            <div>
+                <label for="pl">Petal Length</label>
+                <input type="text" id="pl" name="PetalLengthCm">
+            </div>
+            <div>
+                <label for="pw">Petal Width</label>
+                <input type="text" id="pw" name="PetalWidthCm">
+            </div>
+            <p class="pred">Hasil Prediksi : {{prediction_text}}</p>
+            <button class="button" disabled="disabled">Prediksi</button>
+        </form>
+    </section>
+    <section id="our-team">
+        <div class="about-title">
+            <span class="about-line"></span>
+            <p>Our Team</p>
+            <span class="about-line"></span>
+        </div>
+        <div class="team">
+            <div class="profil">
+                <img src="../static/image/alif.jpeg" alt="profile">
+                <p>Alif Nur Rokhman</p>
+                <p>Universitas Darma Persada</p>
+            </div>
+            <div class="profil">
+                <img src="../static/image/aulia.jpg" alt="profil">
+                <p>Aulia Ayu Puspaningrum</p>
+                <p>Universitas Darma Persada</p>
+            </div>
+            <div class="profil">
+                <img src="../static/image/frizy.jpeg" alt="profil">
+                <p>Frizy Gartian</p>
+                <p>Universitas Darma Persada</p>
+            </div>
+            <div class="profil">
+                <img src="../static/image/puspita.jpeg" alt="profil">
+                <p>Puspita Apriyani </p>
+                <p>Institut Bisnis dan Informatika Kesatuan</p>
+            </div>
+            <div class="profil">
+                <img src="../static/image/ciro.jpg" alt="profil">
+                <p>Krisogonus Wiero Baba Kaju</p>
+                <p>Universitas Esa Unggul</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Kelompok Tensor I</p>
+    </footer>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>
